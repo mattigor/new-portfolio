@@ -1,5 +1,7 @@
 #contact-me article p {
     color: var(--black);
+    display: grid;
+    justify-items: center;
 }
 #contact-me article hr {
     margin: 5px 0 0 0;
