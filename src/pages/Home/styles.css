@@ -1,0 +1,99 @@
+/* Estilos globais */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+:root {
+    --black: #000;
+    --main-color: #111;
+    --background-color: #FFF;
+    --small-txt-color: #555;
+    --dark-btn-hover-color: #333;
+    --light-btn-hover-color: #EEE;
+    --main-span-color: #FC0;
+    --thin-line-hr: #DDD;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    max-width: 100%;
+    font-family: "DM Sans", sans-serif;
+    color: var(--dark-btn-hover-color);
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    cursor: default;
+}
+::selection {
+    background-color: inherit;
+    color: inherit;
+}
+h1 {
+    font-size: 40pt;
+    margin-bottom: 10px;
+    color: var(--black);
+}
+p {
+    font-size: 15pt;
+    font-weight: 400;
+    color: var(--small-txt-color);
+}
+
+/* Estilo das seções */
+#about-me article,
+#education article,
+#contact-me article {
+    height: calc(100vh + 40px + 40px); /* margin-top + margin-bottom da .ul-menu-li */
+    width: 100vw;
+    display: flex;
+    padding: 0 10vw 0 10vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    background-color: var(--background-color);
+}
+
+#my-projects article {
+    height: auto; /* margin-top + margin-bottom da .ul-menu-li */
+    width: 100vw;
+    display: flex;
+    padding: 0 8vw 0 8vw;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    background-color: var(--background-color);
+}
+
+footer span {
+    background-color: var(--black);
+    height: 100px;
+    display: grid;
+    place-content: center;
+    color: var(--background-color);
+    font-weight: 300;
+    font-size: 10pt;
+}
+
+@media (max-width: 768px) {
+    #about-me article {
+        display: flex;
+        padding: 0 20vw 0 20vw;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: justify;
+        background-color: var(--background-color);
+    }
+    #about-me article,
+    #education article,
+    #contact-me article {
+        height: calc(100vh + 40px + 40px - 50px); /* margin-top + margin-bottom da .ul-menu-li */
+    }
+    footer span {
+        text-align: center;
+        padding: 0 30px;
+    }
+}

@@ -1,0 +1,16 @@
+#education article {
+    background-color: var(--main-span-color);
+}
+#education article hr {
+    text-align: center;
+    width: 430px;
+    color: var(--main-color);
+    border: 3px dashed;
+    border-bottom: none;
+}
+
+@media (max-width: 599px) {
+    #education article hr {
+        margin: 100px 0 100px 0
+    }
+}

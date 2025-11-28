@@ -1,0 +1,70 @@
+#education article #education-habilities-h1 {
+    color: var(--black);
+    text-align: center;
+}
+#education article #education-habilities-container {
+    display: flex;
+    height: 160px;
+    width: 520px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+#education article .education-habilities-container-card {
+    height: 100px;
+    width: 100px;
+    text-align: center;
+    display: grid;
+    margin: 10px;
+    justify-content: center;
+    align-items: center;
+    transition: 200ms;
+}
+#education article .education-habilities-container-card svg {
+    fill: var(--black);
+}
+#education article .education-habilities-container-card,
+#education article .education-habilities-container-card svg,
+#education article .education-habilities-container-card span,
+#education article .education-habilities-container-card path,
+#education article .education-habilities-container-card a {
+    cursor: pointer;
+}
+#education article .education-habilities-container-card:hover {
+    transform: scale(1.2);
+}
+#education article .education-habilities-container-card svg {
+    height: 60px;
+    width: 60px;
+    display: grid;
+    margin: 0 15px;
+}
+#education article .education-habilities-container-card span {
+    color: var(--black);
+    margin-top: -10px;
+    font-weight: 500;
+    font-size: 14pt;
+}
+/* Animação do ícone #education-habilities-container-card-react (efeito de rotação) */
+#education article #education-habilities-container-card-react {
+    animation: spin 3s infinite linear;
+}
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 599px) {
+    #education article #education-habilities-h1 {
+        color: var(--black);
+        text-align: center;
+        font-size: 30pt;
+    }
+    #education article .education-habilities-container-card span {
+        font-size: 12pt;
+    }
+}

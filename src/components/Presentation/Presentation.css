@@ -1,0 +1,65 @@
+#about-me figure img {
+    border-radius: 50%;
+    /* border: 7px solid var(--main-span-color); */
+    width: 200px;
+    height: auto;
+    /* box-shadow: 0 0 10px rgb(255, 204, 0, .4); */
+    margin: 0 0 5px 0;
+}
+#about-me article a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+#about-me article h1 {
+    font-size: 40pt;
+    text-align: justify;
+}
+#about-me article p {
+    font-size: 12pt;
+    width: 500px;
+    text-align: center;
+}
+#about-me article span {
+    color: var(--main-span-color);
+}
+#about-me article a #about-me-button-cv {
+    padding: 7px 12px 7px 12px;
+    background-color: var(--main-color);
+    border: none;
+    color: var(--background-color);
+    font-size: 12pt;
+    margin-top: 25px;
+    border-radius: 4px;
+    transition: 130ms ease;
+    cursor: pointer;
+    font-weight: 450;
+}
+#about-me article a #about-me-button-cv:hover {
+    background-color: var(--dark-btn-hover-color);
+}
+
+@media (max-width: 768px) {
+    #about-me article h1 {
+        font-size: 35pt;
+        text-align: center;
+    }
+    #about-me article p {
+        font-size: 11pt;
+        width: 100%;
+        text-align: center;
+        word-spacing: -2px;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 599px) {
+    #about-me article h1 {
+        font-size: 21pt;
+    }
+    #about-me article p {
+        font-size: 10pt;
+        text-align: justify;
+    }
+}

@@ -1,0 +1,132 @@
+#navbar {
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    background-color: white;
+}
+
+#navbar .menu-icon {
+    display: none;
+    cursor: pointer;
+    padding: 10px;
+    margin: 16px;
+}
+
+#navbar .menu-icon div {
+    width: 30px;
+    height: 4px;
+    background-color: var(--black);
+    margin: 4px 0;
+    transition: 0.4s;
+    cursor: pointer;
+    border-radius: 1px;
+}
+
+#navbar .menu-icon.open .bar1 {
+    transform: rotate(-45deg) translate(-7px, 3px);
+}
+
+#navbar .menu-icon.open .bar2 {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+#navbar .menu-icon.open .bar3 {
+    transform: rotate(45deg) translate(-8px, -5px);
+}
+
+#navbar #ul-menu {
+    float: right;
+    margin: 0 50px 0 0;
+    max-height: 300px;
+    list-style: none;
+    padding: 0;
+}
+
+#navbar #ul-menu.open {
+    max-height: 300px;
+}
+
+#navbar #ul-menu .ul-menu-li {
+    display: inline-block;
+    margin: 30px 10px 30px 10px;
+}
+
+#navbar #ul-menu .ul-menu-li a {
+    text-decoration: none;
+    font-size: 9pt; /* original size of the font */
+    padding: 7px 12px 7px 12px;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 550;
+    border-radius: 4px;
+    color: var(--black);
+    transition: 130ms ease;
+    cursor: pointer;
+}
+
+#navbar #ul-menu .ul-menu-li a:hover {
+    background-color: var(--light-btn-hover-color);
+}
+
+#navbar #ul-menu .ul-menu-li a.ativo {
+    background-color: var(--main-span-color);
+    color: var(--background-color);
+}
+
+#navbar #ul-menu .ul-menu-li a.ativo:hover {
+    background-color: var(--main-span-color);
+}
+
+@media (max-width: 1024px) {
+    #navbar {
+        display: flex;
+        justify-content: flex-end;
+        background-color: white;
+    }
+
+    #navbar .menu-icon {
+        display: block;
+    }
+
+    #navbar #ul-menu {
+        display: block;
+        float: none;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        background-color: white;
+        width: 200px;
+        position: absolute;
+        top: 65px; /* Based on navbar height */
+        right: 0;
+        border-radius: 15px;
+        max-height: 0;
+        transition: max-height 250ms ease-out;
+        overflow: hidden;
+    }
+
+    #navbar #ul-menu.open {
+        display: block;
+        box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.1);
+        max-height: 300px;
+        transition: 500ms;
+        padding: 0 0 5px 0;
+    }
+
+    #navbar #ul-menu .ul-menu-li {
+        display: block;
+        margin: 10px 0;
+        text-align: center;
+        padding: 0 15px;
+    }
+
+    #navbar #ul-menu .ul-menu-li a {
+        display: block;
+        padding: 15px;
+    }
+}
+
+#navbar #ul-menu .ul-menu-li.active a {
+    background-color: var(--main-span-color);
+    color: var(--background-color);
+}
